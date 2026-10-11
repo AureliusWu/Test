@@ -1,0 +1,5 @@
+# Complete offline distribution. Every asset is included in game.zip before play.
+# Ren'Py's image/music/voice streaming is intentionally disabled for this short game.
+- image game/**
+- music game/**
+- voice game/**

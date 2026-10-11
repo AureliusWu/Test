@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
-export const CONTRACT_VERSION = '1.0.0';
+export const CONTRACT_VERSION = '1.1.0';
 
 // Engine-neutral structural checks. State-dependent route execution remains the
 // native engine's responsibility; a graph path count is not a playable route count.

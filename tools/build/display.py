@@ -23,6 +23,8 @@ class DisplayMode(ctypes.Structure):
 def main():
     if os.name != 'nt':
         raise SystemExit('This desktop setup runs on Windows only.')
+    if os.environ.get('GITHUB_ACTIONS') != 'true':
+        raise SystemExit('This helper changes a dedicated GitHub Actions desktop only. For local verification use RENPY_ACCEPTANCE_WINDOWED=1; it adjusts only the test process and window.')
     user = ctypes.WinDLL('user32', use_last_error=True)
     enum = user.EnumDisplaySettingsW
     enum.argtypes = [w.LPCWSTR, w.DWORD, ctypes.POINTER(DisplayMode)]

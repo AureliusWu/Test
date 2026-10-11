@@ -1,0 +1,4176 @@
+{
+  "schema": 1,
+  "contractVersion": "1.1.0",
+  "project": "Rain",
+  "repository": "https://github.com/AureliusWu/Rain",
+  "sourceCommit": "192cd3438556364bf5125bd333a223f92ce81fbb",
+  "inventoryDate": "2026-10-11",
+  "entries": [
+    {
+      "id": "shared-vn-production",
+      "kind": "tool",
+      "reuse": "recipe",
+      "origin": "AureliusWu/Rain, NetLove and Healing; shared production contract v1.1.0",
+      "sourceStatus": "not-applicable",
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "files": [
+        {
+          "role": "recipe",
+          "path": "docs/production/SHARED-VN.md",
+          "encoding": "text-lf",
+          "sha256": "f08a062eed6bf65683b8fd4197bbd3852973adb45d5f107a72d303028c571f1d"
+        },
+        {
+          "role": "recipe",
+          "path": "scripts/vn-contract.mjs",
+          "encoding": "text-lf",
+          "sha256": "7385f28e51f7b633e3e64ec15b51891d4b5edbc17d1f3a0a7d18c9d5887ecdb7"
+        },
+        {
+          "role": "recipe",
+          "path": "scripts/vn-contract.d.mts",
+          "encoding": "text-lf",
+          "sha256": "382423131839fa824b4ba46ad2c64cb5653c6a562f736c381da938f013ac776f"
+        },
+        {
+          "role": "recipe",
+          "path": "scripts/vn-materials.mjs",
+          "encoding": "text-lf",
+          "sha256": "3b7ad85d6437f85bb376dbe2bf1d72b5c086c1a7a89e5db6e1cfe6ba78d76d6d"
+        },
+        {
+          "role": "recipe",
+          "path": "scripts/vn-materials.test.mjs",
+          "encoding": "text-lf",
+          "sha256": "591898378eab69462e3d8f725486574c7ef7201a0f74fa7441de63b50bce9cab"
+        },
+        {
+          "role": "recipe",
+          "path": "docs/production/REUSABLE-MATERIALS.md",
+          "encoding": "text-lf",
+          "sha256": "68659626d126f1e8751f145123541da02c7592b9ce19fc24d5ee9cab3cbfa6e4"
+        },
+        {
+          "role": "template",
+          "path": "docs/production/templates/ART-PROMPT.md",
+          "encoding": "text-lf",
+          "sha256": "2707278d457016924469427b4d80e2a7ae19a7090df06d3fc0f33a1c3348db49"
+        },
+        {
+          "role": "template",
+          "path": "docs/production/templates/ASSET-RECORD.json",
+          "encoding": "text-lf",
+          "sha256": "e89b8775b40e89e5ca57135fbae0eb8f13a009ff450fcb9baed83b9543c92cc9"
+        },
+        {
+          "role": "template",
+          "path": "docs/production/templates/DUAL-PLATFORM-CHECKLIST.md",
+          "encoding": "text-lf",
+          "sha256": "25e938e4294def0b00b34cc4703bfdec7221591fd2ae13ce10109cc390d933d1"
+        }
+      ]
+    },
+    {
+      "id": "rain_theme",
+      "kind": "audio",
+      "reuse": "licensed",
+      "origin": "Original procedural synthesis; tools/bootstrap_assets.py",
+      "sourceStatus": "present",
+      "approvalStatus": "development",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/bgm/rain_theme.ogg",
+          "encoding": "binary",
+          "sha256": "7e4b460b55a4116f721214ca8a80414c65812ad2447b5bb30457758a4e3d94c1"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/rain_theme_v1.wav",
+          "encoding": "binary",
+          "sha256": "68083ab1095af246137e3fdfac72a81b32d3a12b07d3101f9ed10b46ff4d43e5"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 22050,
+          "channels": 1,
+          "frames": 529200,
+          "duration_seconds": 24,
+          "peak": 0.150862,
+          "rms_dbfs": -27.521
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 22050,
+          "channels": 1,
+          "frames": 529200,
+          "duration_seconds": 24,
+          "peak": 0.147278,
+          "rms_dbfs": -27.518
+        },
+        "status": "development"
+      }
+    },
+    {
+      "id": "rain_ambience",
+      "kind": "audio",
+      "reuse": "licensed",
+      "origin": "Original procedural synthesis; tools/bootstrap_assets.py",
+      "sourceStatus": "present",
+      "approvalStatus": "development",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/sfx/rain_ambience.ogg",
+          "encoding": "binary",
+          "sha256": "d6e2ddb5b362121ad30b9f28ef76a01d7749ce2ce7a00306358c52f99c635ffa"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/rain_ambience_v1.wav",
+          "encoding": "binary",
+          "sha256": "93d2eecfef56322a8c8f66d5ca6a11562943957cb210fd5ad77547018ff61b81"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 22050,
+          "channels": 1,
+          "frames": 441000,
+          "duration_seconds": 20,
+          "peak": 0.179215,
+          "rms_dbfs": -27.078
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 22050,
+          "channels": 1,
+          "frames": 441000,
+          "duration_seconds": 20,
+          "peak": 0.139984,
+          "rms_dbfs": -21.856
+        },
+        "status": "development"
+      }
+    },
+    {
+      "id": "fonts_SourceHanSansLite",
+      "kind": "font",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 sdk-fonts/SourceHanSansLite.ttf; Adobe Source Han Sans",
+      "sourceStatus": "not-applicable",
+      "approvalStatus": "development",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/fonts/SourceHanSansLite.ttf",
+          "encoding": "binary",
+          "sha256": "b2aaf73b7acc23d746b110f1caeaecc93d4292824979af44e96000200591b2a7"
+        }
+      ],
+      "license": {
+        "name": "SIL Open Font License 1.1",
+        "file": {
+          "role": "license",
+          "path": "licenses/SourceHanSans-OFL.txt",
+          "encoding": "text-lf",
+          "sha256": "fcac737e761ec63dbfbdce11030a1780161920d80315edba9c8beff1c2bac5a2"
+        }
+      },
+      "formatMetadata": {
+        "status": "development"
+      }
+    },
+    {
+      "id": "gui_bar_bottom",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/bar/bottom.png",
+          "encoding": "binary",
+          "sha256": "721cdb7cf92460db96cac248b325947bb2673f372f451d5030b2925fcbcb712f"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/bar/bottom.png",
+          "encoding": "binary",
+          "sha256": "0478c616d012bb31efabd6cbbe1bd481227abbbe31c467deaf7a943204a4c7db"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 54,
+          "height": 525,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "fbf79bcb8694a5da9d3d54104b31ebfd458a0420ddb5c48d3c4bb209d5a0d172"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_bar_left",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/bar/left.png",
+          "encoding": "binary",
+          "sha256": "ee9876b8045f970e91bc462c3919801ae4d71fcb9a00ed6bd260dfc876e87c81"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/bar/left.png",
+          "encoding": "binary",
+          "sha256": "039c278509dcff1f9d13b8b6d43fbcc4722800814833f6a677c194db8bc81160"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 525,
+          "height": 54,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "b90593d137b51174f26012793f32358a1226c02a60bf13c8807d7dfdf52205e5"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_bar_right",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/bar/right.png",
+          "encoding": "binary",
+          "sha256": "c51f501db9d6df4ecd1689368ec4253ed9994ea8ec56bd1a4077114f983e1f3e"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/bar/right.png",
+          "encoding": "binary",
+          "sha256": "c482a23e050de4decff0723317760c79dbd4722d2af06f0bc426fb069639365f"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 525,
+          "height": 54,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "da689dd41c9b4d56574c0c2243fdfeb0d45089b03d40636f94d8835e445b9b78"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_bar_top",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/bar/top.png",
+          "encoding": "binary",
+          "sha256": "880d451dd4441428f9e51ace9ef3cff094dc08de9708faa2504cf50d34c85d76"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/bar/top.png",
+          "encoding": "binary",
+          "sha256": "b3e2cd981d51fef60675dc1151ca5b145bbe74f8abcfc482e52b1ffc60be48e0"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 54,
+          "height": 525,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "c26b8728f81c8468800b98ed88044226cc57e3910add9d29693ec54ea1955eb5"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_button_check_foreground",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/button/check_foreground.png",
+          "encoding": "binary",
+          "sha256": "0523f181fb0b2bb150e3cb423348331d47185e13dea8b9f6ed9d2169cc93f0ee"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/button/check_foreground.png",
+          "encoding": "binary",
+          "sha256": "d6c660fe037e2c7ea3cee46b8b2bf49ca25b9e0a8320045657782bed88e4fe6e"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 38,
+          "height": 54,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "5c1f1ab7261845d46eb1e7293776a18c87efc48b5f5a02dda3283f6de3cba012"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_button_check_selected_foreground",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/button/check_selected_foreground.png",
+          "encoding": "binary",
+          "sha256": "38fef02478b327d1548e756bbdfaef84c5bbeee7fa7639d0b22ff50d5a6d81a9"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/button/check_selected_foreground.png",
+          "encoding": "binary",
+          "sha256": "38fef02478b327d1548e756bbdfaef84c5bbeee7fa7639d0b22ff50d5a6d81a9"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 38,
+          "height": 54,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "fda7cb9d30c2fcaf3d9d2449d4892ffccbe173a0b62cbf0dab2d4a1261de7065"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_button_choice_hover_background",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/button/choice_hover_background.png",
+          "encoding": "binary",
+          "sha256": "96572edec6ace61ad48ef71ff9aec51edd31a3321c1567ea4a55c3e4e573c2ec"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/button/choice_hover_background.png",
+          "encoding": "binary",
+          "sha256": "2116bf4221690929b823a09d2df332acffa2e8b66b69359d7b1264713309d4cb"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1185,
+          "height": 52,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "242d0ac731622ea1e2df43ccc8e0d302b19551b485c341b136c0b010b365d131"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_button_choice_idle_background",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/button/choice_idle_background.png",
+          "encoding": "binary",
+          "sha256": "dae769c41cf0a3a9f975c6fbfcfafa85f3bb91d46b96e5f4890986c52e5c30b5"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/button/choice_idle_background.png",
+          "encoding": "binary",
+          "sha256": "cc9f3e64b4f7a41e1c229c158b0468b72ab3016029f5c3da448261d0be827317"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1185,
+          "height": 52,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "7ad95a14a5e95dfcd6ad1a7bf80c2da9f9d508bd97bfbfd9d40a9e8b1d067db6"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_button_hover_background",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/button/hover_background.png",
+          "encoding": "binary",
+          "sha256": "2572afec54712484ac9fab98bf899e1793b3c937935fb19ec3ac05a46628b388"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/button/hover_background.png",
+          "encoding": "binary",
+          "sha256": "bacda0751bcdd1a853e6441d4b3dcfa4a01ff55cdfa028e7f4dfb27a142038e5"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 450,
+          "height": 54,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "933e979bfb74e50e827ea3f334e6c023f0cfd2a95273b46f6cabb63187540263"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_button_idle_background",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/button/idle_background.png",
+          "encoding": "binary",
+          "sha256": "2572afec54712484ac9fab98bf899e1793b3c937935fb19ec3ac05a46628b388"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/button/idle_background.png",
+          "encoding": "binary",
+          "sha256": "bacda0751bcdd1a853e6441d4b3dcfa4a01ff55cdfa028e7f4dfb27a142038e5"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 450,
+          "height": 54,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "933e979bfb74e50e827ea3f334e6c023f0cfd2a95273b46f6cabb63187540263"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_button_quick_hover_background",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/button/quick_hover_background.png",
+          "encoding": "binary",
+          "sha256": "d41adf1e1c21cfd598b204ad2e15106ed457d39a3bc4401875f18cc743e9b2bf"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/button/quick_hover_background.png",
+          "encoding": "binary",
+          "sha256": "a797767c0ab31b5eec7ec553ad3924776d078fbee432a4623f638cf047db0b9f"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 150,
+          "height": 45,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "5fd409d148da5787d190ef0552f3150dba80c5fc1fbb09611c97522219ae48e9"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_button_quick_idle_background",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/button/quick_idle_background.png",
+          "encoding": "binary",
+          "sha256": "d41adf1e1c21cfd598b204ad2e15106ed457d39a3bc4401875f18cc743e9b2bf"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/button/quick_idle_background.png",
+          "encoding": "binary",
+          "sha256": "a797767c0ab31b5eec7ec553ad3924776d078fbee432a4623f638cf047db0b9f"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 150,
+          "height": 45,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "5fd409d148da5787d190ef0552f3150dba80c5fc1fbb09611c97522219ae48e9"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_button_radio_foreground",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/button/radio_foreground.png",
+          "encoding": "binary",
+          "sha256": "0523f181fb0b2bb150e3cb423348331d47185e13dea8b9f6ed9d2169cc93f0ee"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/button/radio_foreground.png",
+          "encoding": "binary",
+          "sha256": "d6c660fe037e2c7ea3cee46b8b2bf49ca25b9e0a8320045657782bed88e4fe6e"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 38,
+          "height": 54,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "5c1f1ab7261845d46eb1e7293776a18c87efc48b5f5a02dda3283f6de3cba012"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_button_radio_selected_foreground",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/button/radio_selected_foreground.png",
+          "encoding": "binary",
+          "sha256": "38fef02478b327d1548e756bbdfaef84c5bbeee7fa7639d0b22ff50d5a6d81a9"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/button/radio_selected_foreground.png",
+          "encoding": "binary",
+          "sha256": "38fef02478b327d1548e756bbdfaef84c5bbeee7fa7639d0b22ff50d5a6d81a9"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 38,
+          "height": 54,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "fda7cb9d30c2fcaf3d9d2449d4892ffccbe173a0b62cbf0dab2d4a1261de7065"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_button_slot_hover_background",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/button/slot_hover_background.png",
+          "encoding": "binary",
+          "sha256": "0fe8a9bde95c5eb7f71d7706be84648cebbafac5b7ad6a739c81ab3fa0cfdca5"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/button/slot_hover_background.png",
+          "encoding": "binary",
+          "sha256": "ac592f91652fb7c9ea508fa82d7fb7ae4c457967ab0941e374345869e84cd793"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 414,
+          "height": 309,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "9294e95e3f2f8209314cdd03c018efce117a2d7c6017e4e42ee04eea1f2fe200"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_button_slot_idle_background",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/button/slot_idle_background.png",
+          "encoding": "binary",
+          "sha256": "68a27f73b75957a87ad76be273dedfac2efd5faa67974878e56e130e94d0a3d6"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/button/slot_idle_background.png",
+          "encoding": "binary",
+          "sha256": "ff2a5a0a8cfe90b68aea0809a441e8b3e79f5a9508b4d5b2c8dd508cd5abf7d0"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 414,
+          "height": 309,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "641f0340c5c8fa5fe5380e99a0c67e438a1729dd07c47b4a4d1085de31f043db"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_frame",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/frame.png",
+          "encoding": "binary",
+          "sha256": "a434ce8479eb6f5bf768e294319f0a6b5b93825df4dab401a41f651f9939e2d0"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/frame.png",
+          "encoding": "binary",
+          "sha256": "bb3819b02cc1a098ef99477bce13c3fe0d6e47849b9885bf5451a2b381b25b44"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 900,
+          "height": 375,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "a2b4a48e8f93a4da3e775ea50082fdd7046cf53864fd4462d7379cbec8ae4651"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_game_menu",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural UI; tools/bootstrap_assets.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/game_menu.png",
+          "encoding": "binary",
+          "sha256": "afe0fbeaf019f01e35534ece6bdf120abc4b4600788610343256e2d7ffd0fbca"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/game_menu.png",
+          "encoding": "binary",
+          "sha256": "2b33ea35763787a35a6d16613aaecfa7f8fa79f1a7704aa5b115cdd1b3a1aefb"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "71748b93d9ae175b2f0510dcc5b6e4731d4ed8fc04c90fa94ad8f32841f437a4"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_main_menu",
+      "kind": "ui",
+      "reuse": "project-only",
+      "origin": "Original AI-generated station background, reused for main menu",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/main_menu.png",
+          "encoding": "binary",
+          "sha256": "d3c090ef26d63243ba316e0755453c876e69e9c218d2b3af0251f9546f991c0e"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/background/station_rain_v1.png",
+          "encoding": "binary",
+          "sha256": "9080cb886bdeeeba1fb506e252fde3c0b4450ef113f8a6ee831edbab020f4bab"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/background/station_rain_v1.md",
+          "encoding": "text-lf",
+          "sha256": "b6380c85f29b6bfe7c800d363cb61596f4858872ec30419a844aac8c888a1d83"
+        }
+      ],
+      "licenseNote": "AI-generated output; see CREDITS.md",
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "format": "PNG",
+          "has_alpha": false,
+          "pixel_sha256": "5eef633949924e79778353fe006dea806771cd9f50ac42a4c9cb24f61e0ed396"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_namebox",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/namebox.png",
+          "encoding": "binary",
+          "sha256": "2572afec54712484ac9fab98bf899e1793b3c937935fb19ec3ac05a46628b388"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/namebox.png",
+          "encoding": "binary",
+          "sha256": "bacda0751bcdd1a853e6441d4b3dcfa4a01ff55cdfa028e7f4dfb27a142038e5"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 450,
+          "height": 54,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "933e979bfb74e50e827ea3f334e6c023f0cfd2a95273b46f6cabb63187540263"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_notify",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/notify.png",
+          "encoding": "binary",
+          "sha256": "b9c7d218c7f53fce858e87d39a240fd5ddf0456b1f5fd97024b008e91a076016"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/notify.png",
+          "encoding": "binary",
+          "sha256": "0eec495378a96561b61db1e1220ec2700401ab203b5c7d13e9c478fd3b171397"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1383,
+          "height": 64,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "c46cd22c952877a435c1cd588ae212a07545b50e454931813da7a0ed2541a238"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_nvl",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/nvl.png",
+          "encoding": "binary",
+          "sha256": "3c5f7e0c4a9ce4eb5b81a9f79e3aadf88345b72426883989d6d9847773c60167"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/nvl.png",
+          "encoding": "binary",
+          "sha256": "f0e60df6c89ab685368729a526ba760ec2b53a8e05a4941a895455aa80837752"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "771749e3769b8e4b976a6bb34fd7eda5f5aa286afb2fc2052891750a005e86b0"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_overlay_confirm",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/overlay/confirm.png",
+          "encoding": "binary",
+          "sha256": "58de7366247946c678d9fde9913a1e60787cd8342d2067df33f03d49e6226700"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/overlay/confirm.png",
+          "encoding": "binary",
+          "sha256": "eb857a3e076dc09e8fd53d33a901207558f6871e38d5da4cc78afca0a5737adc"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "34fd68fa8885c1c621e6dc2e082f036d6d74546213ad908a19159a914c0633b2"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_overlay_game_menu",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/overlay/game_menu.png",
+          "encoding": "binary",
+          "sha256": "1498189ef95e47d9005b0185ef3ca3c47582425092a8535a2bc625f5812204ac"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/overlay/game_menu.png",
+          "encoding": "binary",
+          "sha256": "1498189ef95e47d9005b0185ef3ca3c47582425092a8535a2bc625f5812204ac"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "5f0257f983f66efa3ad717fa5323593eb52e79d7952b1d10ffe6820c459a051c"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_overlay_main_menu",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/overlay/main_menu.png",
+          "encoding": "binary",
+          "sha256": "9d9018afcc815cb732db0d1d5af4b887024352c4766d4d18494836c22d06c259"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/overlay/main_menu.png",
+          "encoding": "binary",
+          "sha256": "9d9018afcc815cb732db0d1d5af4b887024352c4766d4d18494836c22d06c259"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "f88320cc1a560aee886706d9f51ea2ac448acb0831cad63fa5d387d99a4f04f7"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_phone_nvl",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/phone/nvl.png",
+          "encoding": "binary",
+          "sha256": "8393c2c9d95e524e7a4ff53ac7188a7e74b26ed06a743113e4a532d744810bd3"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/phone/nvl.png",
+          "encoding": "binary",
+          "sha256": "24014733ccbae6e9aa7c37b4baaaf655edaf37b0a2dc21a6d79ca2b93ad6cb6a"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "b709ef02483ee762344acebb3dd7d1a273d64282253fb5b5dac13935a4ac0c08"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_phone_overlay_game_menu",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/phone/overlay/game_menu.png",
+          "encoding": "binary",
+          "sha256": "21593bd8b1091325ac3370e20f163c75110e008673d8bb3dd2081f64cd573ea4"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/phone/overlay/game_menu.png",
+          "encoding": "binary",
+          "sha256": "22f51657735a3b2c81014b328f50e5a83e2ee689e4c3965751e6a992198c9859"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "0716dff6e0324e1938245afd1a1fce10894e876f319e9a86d2774dcc83b49146"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_phone_overlay_main_menu",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/phone/overlay/main_menu.png",
+          "encoding": "binary",
+          "sha256": "d8728432226ec3d6b615d7c7a0368e5081165211617a1089ee8f50c24835cf4f"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/phone/overlay/main_menu.png",
+          "encoding": "binary",
+          "sha256": "3ef646f88f1010bec68c630f571873f606643c661678913d5424ce6e89c1524a"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "912bba52bbb8710efdf4e44f81352637d8b4c855298daa10ed7ccfaa0db9cb48"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_phone_textbox",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/phone/textbox.png",
+          "encoding": "binary",
+          "sha256": "a6554d0dfa7d64efe6d774439a5f02fc1bffb250f5176c2d08d548a2866cd5b3"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/phone/textbox.png",
+          "encoding": "binary",
+          "sha256": "a66ee5c01333ef37383853c849c1d8ee6ed436c8f5f02866151512ae172a9cc9"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 360,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "a53b9b22aa2a0ccf5a87bd28f681a5990bc40a3d0f77ff41b2c8f357b58cef7d"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_scrollbar_horizontal_hover_bar",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/scrollbar/horizontal_hover_bar.png",
+          "encoding": "binary",
+          "sha256": "66b1198137b1b3d9507b1e17daaaef133e8eff49a659b129e0041df7bb942055"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/scrollbar/horizontal_hover_bar.png",
+          "encoding": "binary",
+          "sha256": "66b1198137b1b3d9507b1e17daaaef133e8eff49a659b129e0041df7bb942055"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1050,
+          "height": 18,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "2c083617c37ae82265619328a739d0c649731ddc17c123c18ab6dd231a30ba97"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_scrollbar_horizontal_hover_thumb",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/scrollbar/horizontal_hover_thumb.png",
+          "encoding": "binary",
+          "sha256": "adc68bd558c71bced1c0a407d77e1bc374a78fe399ad8f1f5a54612d90d696b5"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/scrollbar/horizontal_hover_thumb.png",
+          "encoding": "binary",
+          "sha256": "adc68bd558c71bced1c0a407d77e1bc374a78fe399ad8f1f5a54612d90d696b5"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1050,
+          "height": 18,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "d23dbca15e23a5668c342b0ce5ba03434f761d28cc664b8ebd4be4f1679eff5d"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_scrollbar_horizontal_idle_bar",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/scrollbar/horizontal_idle_bar.png",
+          "encoding": "binary",
+          "sha256": "6226315eeafdb3584292db30e44462682911f2d2aac5936db71d2f534220a249"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/scrollbar/horizontal_idle_bar.png",
+          "encoding": "binary",
+          "sha256": "6226315eeafdb3584292db30e44462682911f2d2aac5936db71d2f534220a249"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1050,
+          "height": 18,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "1a2313d93fef136769c5d68dea2f41f6d7ccbf05a7f35fa80d8da1f48d20e13c"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_scrollbar_horizontal_idle_thumb",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/scrollbar/horizontal_idle_thumb.png",
+          "encoding": "binary",
+          "sha256": "07b6d025870d5607be9737601f290bb3feef2bbe8b57453cec8a8fa0072735ed"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/scrollbar/horizontal_idle_thumb.png",
+          "encoding": "binary",
+          "sha256": "07b6d025870d5607be9737601f290bb3feef2bbe8b57453cec8a8fa0072735ed"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1050,
+          "height": 18,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "96a75b20989459acfae4661ea3700be57a7d4de5aa3ced38420d023fbb37fd76"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_scrollbar_vertical_hover_bar",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/scrollbar/vertical_hover_bar.png",
+          "encoding": "binary",
+          "sha256": "b0d6ed0b20b9b89dea81d5318c524dcff6087b2226944778da60d5a29e724238"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/scrollbar/vertical_hover_bar.png",
+          "encoding": "binary",
+          "sha256": "b0d6ed0b20b9b89dea81d5318c524dcff6087b2226944778da60d5a29e724238"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 18,
+          "height": 1050,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "c1956ee3c87245ca76171bc167b4bf2d427623b6ece5efd3855f2099059a5dc4"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_scrollbar_vertical_hover_thumb",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/scrollbar/vertical_hover_thumb.png",
+          "encoding": "binary",
+          "sha256": "bfa28ab950fe154542d41f28da3f51bb897be350f3765276809d66c3a8cf6989"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/scrollbar/vertical_hover_thumb.png",
+          "encoding": "binary",
+          "sha256": "bfa28ab950fe154542d41f28da3f51bb897be350f3765276809d66c3a8cf6989"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 18,
+          "height": 1050,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "30bfb76769288fd95e4ee35286db28923d1fbefb5bd9890f30d919cf78f3b3ea"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_scrollbar_vertical_idle_bar",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/scrollbar/vertical_idle_bar.png",
+          "encoding": "binary",
+          "sha256": "02fc75156c63d3dc671345e2d2091d947db9c950d10622dac724f4c12955cc56"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/scrollbar/vertical_idle_bar.png",
+          "encoding": "binary",
+          "sha256": "02fc75156c63d3dc671345e2d2091d947db9c950d10622dac724f4c12955cc56"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 18,
+          "height": 1050,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "86ae2fdb30d89e5e87f982261ba308928f6c8dee0544dfbd9de402e8d0ad5fe7"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_scrollbar_vertical_idle_thumb",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/scrollbar/vertical_idle_thumb.png",
+          "encoding": "binary",
+          "sha256": "39f7285ec203d24c4ad16d7b7b0e0af72d7f71308e0cc5d1ec64e5fe66ee7ea3"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/scrollbar/vertical_idle_thumb.png",
+          "encoding": "binary",
+          "sha256": "39f7285ec203d24c4ad16d7b7b0e0af72d7f71308e0cc5d1ec64e5fe66ee7ea3"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 18,
+          "height": 1050,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "faa62bedca250272a0e4b9015c4a124ffc1af79d294fd6913c767670b5a01883"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_skip",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Ren'Py 8.5.3 stock GUI (MIT)",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/skip.png",
+          "encoding": "binary",
+          "sha256": "2871ec605d2e9a1c6f552dedda78c557cc3e6a5ae3e6e96d5b05570146fbaa9c"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/skip.png",
+          "encoding": "binary",
+          "sha256": "e7c723c88f9eb5d9ec9f18f77a464ac38a6c6161e2acfbe170d5ebb7a977992b"
+        }
+      ],
+      "license": {
+        "name": "Ren'Py MIT",
+        "file": {
+          "role": "license",
+          "path": "licenses/RENPY.txt",
+          "encoding": "text-lf",
+          "sha256": "b5d4610dfb530c53d5ce681e913f313903948616eb7b4ff8e8ddd19337852c1e"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 360,
+          "height": 64,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "3c2f6dcf0d94d26885dbddafd64ee90d1936660189127bb12eeb8273b509999c"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_slider_horizontal_hover_bar",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/slider/horizontal_hover_bar.png",
+          "encoding": "binary",
+          "sha256": "45bdf7c6ff27b8d1f6fd1f9a30db9221f78034f6ad4e663613635bbb9a5291f4"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/slider/horizontal_hover_bar.png",
+          "encoding": "binary",
+          "sha256": "45bdf7c6ff27b8d1f6fd1f9a30db9221f78034f6ad4e663613635bbb9a5291f4"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 525,
+          "height": 45,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "f9d2d326ab47b92b6e1b45333400acde208353c37421875ff41550e278f488e3"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_slider_horizontal_hover_thumb",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/slider/horizontal_hover_thumb.png",
+          "encoding": "binary",
+          "sha256": "68170e3489086ec9d5ddefdc13ea6bd0fb248fd36ff9eaa5dac4eb22b323ac5e"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/slider/horizontal_hover_thumb.png",
+          "encoding": "binary",
+          "sha256": "68170e3489086ec9d5ddefdc13ea6bd0fb248fd36ff9eaa5dac4eb22b323ac5e"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 22,
+          "height": 45,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "584276025533e8643c695b652c0897698d24a72e1a39cafb8b5549ce4a3b2ca6"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_slider_horizontal_idle_bar",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/slider/horizontal_idle_bar.png",
+          "encoding": "binary",
+          "sha256": "3b980663adb997db81442d0bde4ac67cc863b0e57c038e09b115f4853c084048"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/slider/horizontal_idle_bar.png",
+          "encoding": "binary",
+          "sha256": "3b980663adb997db81442d0bde4ac67cc863b0e57c038e09b115f4853c084048"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 525,
+          "height": 45,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "0b5ecad015389a60baa2004e498377d266bb531e033ba45b47583e3bcfbd9d5c"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_slider_horizontal_idle_thumb",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/slider/horizontal_idle_thumb.png",
+          "encoding": "binary",
+          "sha256": "5b8440deb0750534f4a53b80200ce167843b0072e655a91ae7c2f8e35edfa9c4"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/slider/horizontal_idle_thumb.png",
+          "encoding": "binary",
+          "sha256": "5b8440deb0750534f4a53b80200ce167843b0072e655a91ae7c2f8e35edfa9c4"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 22,
+          "height": 45,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "ff26529b5827f6ec6d6c4e3a6e5dc93262ca92a2719e37730c03b687ca6f85ff"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_slider_vertical_hover_bar",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/slider/vertical_hover_bar.png",
+          "encoding": "binary",
+          "sha256": "e1b8832f55827d40a3f8341c7b86d954808a437b48e3e32138c05e80fd005751"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/slider/vertical_hover_bar.png",
+          "encoding": "binary",
+          "sha256": "e1b8832f55827d40a3f8341c7b86d954808a437b48e3e32138c05e80fd005751"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 45,
+          "height": 525,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "18f85113a14fb66a823197cc93fcb257a67941be8fc64798d6a28404011d7ff0"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_slider_vertical_hover_thumb",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/slider/vertical_hover_thumb.png",
+          "encoding": "binary",
+          "sha256": "53b599b70d45657d231aa393ae5fe874f3285d85573fa468b803697de5607078"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/slider/vertical_hover_thumb.png",
+          "encoding": "binary",
+          "sha256": "53b599b70d45657d231aa393ae5fe874f3285d85573fa468b803697de5607078"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 45,
+          "height": 22,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "b14d11e63ec6b68557892800b49003a972b7554b6f521d72db31446fe04a9aa8"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_slider_vertical_idle_bar",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/slider/vertical_idle_bar.png",
+          "encoding": "binary",
+          "sha256": "495f94351e72b944604ce0af3acfc2f2c9535ad2660b9065a920bf32948b5996"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/slider/vertical_idle_bar.png",
+          "encoding": "binary",
+          "sha256": "495f94351e72b944604ce0af3acfc2f2c9535ad2660b9065a920bf32948b5996"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 45,
+          "height": 525,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "a208f5fd8a8e9c10e3624d62d03ba1c20a39153f2f8d75bfe9deb18973da5993"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_slider_vertical_idle_thumb",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural GUI; tools/image_process/create_ui.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/slider/vertical_idle_thumb.png",
+          "encoding": "binary",
+          "sha256": "d209607b3084d521710f95a4bbe4cad53e1628f66ba22b29b148b04aeeaa10aa"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/v3/slider/vertical_idle_thumb.png",
+          "encoding": "binary",
+          "sha256": "d209607b3084d521710f95a4bbe4cad53e1628f66ba22b29b148b04aeeaa10aa"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 45,
+          "height": 22,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "8f001f9046f471e034ddd0d17e3e049470024981f66c1df1bde10c3a9211b842"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_textbox",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural UI; tools/bootstrap_assets.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/textbox.png",
+          "encoding": "binary",
+          "sha256": "f5f5b9c6b0eb4ecd146a4878361e65a3bf22e8f3f92840873ee84629ce26ed9a"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/textbox.png",
+          "encoding": "binary",
+          "sha256": "33cb112d1c277e8434d75e84531f5d480bc0b9410dba66a557b4aa7b56612093"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 278,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "514a37feada21a9214ead94836f07251bcfab0273b4a1ac2152cdc080dcefd1c"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "gui_window_icon",
+      "kind": "ui",
+      "reuse": "licensed",
+      "origin": "Original procedural UI; tools/bootstrap_assets.py",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/gui/window_icon.png",
+          "encoding": "binary",
+          "sha256": "e0bc4933748a5632e10218faf463b8c65b1d79e1c713944447e741dc5c4bf790"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/ui/legacy720/window_icon.png",
+          "encoding": "binary",
+          "sha256": "e0bc4933748a5632e10218faf463b8c65b1d79e1c713944447e741dc5c4bf790"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "image": {
+          "width": 256,
+          "height": 256,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "62651e7a4dd3285805627637e59b73178589e881ac5554730abbb12c1a06ce3d"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "station",
+      "kind": "art",
+      "reuse": "project-only",
+      "origin": "Built-in imagegen; model identifier not exposed by tool",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/backgrounds/station_rain.png",
+          "encoding": "binary",
+          "sha256": "d3c090ef26d63243ba316e0755453c876e69e9c218d2b3af0251f9546f991c0e"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/background/station_rain_v1.png",
+          "encoding": "binary",
+          "sha256": "9080cb886bdeeeba1fb506e252fde3c0b4450ef113f8a6ee831edbab020f4bab"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/background/station_rain_v1.md",
+          "encoding": "text-lf",
+          "sha256": "b6380c85f29b6bfe7c800d363cb61596f4858872ec30419a844aac8c888a1d83"
+        }
+      ],
+      "licenseNote": "AI-generated output; no third-party reference art; see CREDITS.md",
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "format": "PNG",
+          "has_alpha": false,
+          "pixel_sha256": "5eef633949924e79778353fe006dea806771cd9f50ac42a4c9cb24f61e0ed396"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "heroine_normal",
+      "kind": "art",
+      "reuse": "project-only",
+      "origin": "Built-in imagegen; model identifier not exposed by tool",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/characters/heroine_normal.png",
+          "encoding": "binary",
+          "sha256": "d7d7f53dfe3d53d64fb12469eba21a31e8d7eeeb5c3b0021195ca68a22d9ae0b"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/character/heroine_clean_v2.png",
+          "encoding": "binary",
+          "sha256": "8fcbdda633d97b143003a05e270a42c5a0c1c7ef8901ccf4c5c0d08a25706739"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/character/heroine_clean_v2.md",
+          "encoding": "text-lf",
+          "sha256": "2936787c199df7e315c5b7429152c76af29c859f44979a3e269f12dc2b9ad2c0"
+        }
+      ],
+      "licenseNote": "AI-generated output; no third-party reference art; see CREDITS.md",
+      "formatMetadata": {
+        "image": {
+          "width": 810,
+          "height": 1050,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "c46a22b3788380a48b1b217a7163400bbaeba5dd391d6f6c1ef0ceaed39c90e4"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "unsent_letter",
+      "kind": "art",
+      "reuse": "project-only",
+      "origin": "Built-in imagegen; model identifier not exposed by tool",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/cg/unsent_letter.png",
+          "encoding": "binary",
+          "sha256": "3bec683b1b8563dfe853571d04179d4a64fa5340363aabc0de561f9efe1a35be"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/cg/unsent_letter_v1.png",
+          "encoding": "binary",
+          "sha256": "fb36eb550b946817d1d886d775db0d062a85cf4ac1c1718f102cacc06022aaab"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/cg/unsent_letter_v1.md",
+          "encoding": "text-lf",
+          "sha256": "460289891050f42b73fcb88faafd8092a99d5da4630edc6fd78a0e58bec9a32e"
+        }
+      ],
+      "licenseNote": "AI-generated output; no third-party reference art; see CREDITS.md",
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "format": "PNG",
+          "has_alpha": false,
+          "pixel_sha256": "c9c615d774e5f3c12dacedbc7eb784e3fbcdc43fa6787a7233330aabd58d28de"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "heroine_s01_arrival_l005_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s01_arrival_l005_v1.ogg",
+          "encoding": "binary",
+          "sha256": "3191823a7180c6e6237345a711eb4d8d2359b8014b6b85d1946a316790b9b13f"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s01_arrival_l005_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "3813ef20a2c9b54d4d9d48e973dc1b76cfcf2a722cb44be30567759d760a179d"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 72960,
+          "duration_seconds": 3.04,
+          "peak": 0.488625,
+          "rms_dbfs": -20.029
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 72960,
+          "duration_seconds": 3.04,
+          "peak": 0.4841,
+          "rms_dbfs": -20.075
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s02_reunion_l008_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s02_reunion_l008_v1.ogg",
+          "encoding": "binary",
+          "sha256": "8dd03edfd2d9732d88808753f9c4d7bad0a92203b80679c113ee2fd8dcbc0666"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s02_reunion_l008_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "684d97354149a0dbbad6720f8337f9ccf714970910e966c282b0b4e35e1ba95b"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 97920,
+          "duration_seconds": 4.08,
+          "peak": 0.44837,
+          "rms_dbfs": -20.087
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 97920,
+          "duration_seconds": 4.08,
+          "peak": 0.454987,
+          "rms_dbfs": -20.112
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s03_letter_l011_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s03_letter_l011_v1.ogg",
+          "encoding": "binary",
+          "sha256": "da091a25ab2a943113d5ac25c1ecae2b59a0a72ef91af4c78b5be7924d02f476"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s03_letter_l011_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "63ba228a2611d3beb2e6555a57494efddbb91442bff7d6e114b64298ad090ce1"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 32640,
+          "duration_seconds": 1.36,
+          "peak": 0.541544,
+          "rms_dbfs": -20.61
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 32640,
+          "duration_seconds": 1.36,
+          "peak": 0.542755,
+          "rms_dbfs": -20.654
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s04_waiting_l013_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s04_waiting_l013_v1.ogg",
+          "encoding": "binary",
+          "sha256": "cbbaa390a032218a2b932c60af4e6352695298a07c9614cbe2ee3aa00d3f7df1"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s04_waiting_l013_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "08618764290569c3552c6de35f4270593a57dea4a66d3f6ab351521d76f456ab"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 119040,
+          "duration_seconds": 4.96,
+          "peak": 0.80173,
+          "rms_dbfs": -20.769
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 119040,
+          "duration_seconds": 4.96,
+          "peak": 0.795441,
+          "rms_dbfs": -20.817
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s05_departure_l007_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s05_departure_l007_v1.ogg",
+          "encoding": "binary",
+          "sha256": "c5e97a5cfd1eef16d65ea2faddc80f5f4557dfecae3c6dd0d216966579c2c71f"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s05_departure_l007_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "7ef90da379ea40af6666da9ab1dd1df137e6beeb5840d9f91f89d881deb4ad3f"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 36480,
+          "duration_seconds": 1.52,
+          "peak": 0.491179,
+          "rms_dbfs": -19.756
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 36480,
+          "duration_seconds": 1.52,
+          "peak": 0.499298,
+          "rms_dbfs": -19.788
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s07_true_l014_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s07_true_l014_v1.ogg",
+          "encoding": "binary",
+          "sha256": "5ff301295081eb9e267860afa93392a3907887a185c66bf09dfc60cfb0c28329"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s07_true_l014_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "263851770ed5b65e061d776365433bed5ad930d2c2bff7ccc071b8ced744e9dd"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 53760,
+          "duration_seconds": 2.24,
+          "peak": 0.538889,
+          "rms_dbfs": -20.015
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 53760,
+          "duration_seconds": 2.24,
+          "peak": 0.535278,
+          "rms_dbfs": -20.031
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_smile",
+      "kind": "art",
+      "reuse": "project-only",
+      "origin": "Built-in imagegen; model identifier not exposed by tool",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/characters/heroine_smile_v1.png",
+          "encoding": "binary",
+          "sha256": "91d04eff73a6c16637cb6680216cbfbbc5a6f230af7fe91cef8abf87c37070cf"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/character/heroine_smile_v1.png",
+          "encoding": "binary",
+          "sha256": "293b62fc030a62ad41164536dae7345936a38ede653a27295be4fd56e0d0f66f"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/character/heroine_smile_v1.md",
+          "encoding": "text-lf",
+          "sha256": "3052d436b05e028b187b27cc36a0cb7fd6cab826a0b7f0234b2d7e77a5334c86"
+        }
+      ],
+      "licenseNote": "AI-generated output; no third-party reference art; see CREDITS.md",
+      "formatMetadata": {
+        "image": {
+          "width": 810,
+          "height": 1050,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "f718875e101db2167b0f097c4e7e7d4f8be453d95254677e6cc0c59c1b74cb68"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "heroine_happy",
+      "kind": "art",
+      "reuse": "project-only",
+      "origin": "Built-in imagegen; model identifier not exposed by tool",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/characters/heroine_happy_v1.png",
+          "encoding": "binary",
+          "sha256": "06682ebac013bde79366661351854c278fde3384da94ad85420361a0aebaab8e"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/character/heroine_happy_v1.png",
+          "encoding": "binary",
+          "sha256": "b5f91412d654c90f3c525699aadee05d9d5ae3ae65ce8b47610f53950b52e51c"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/character/heroine_happy_v1.md",
+          "encoding": "text-lf",
+          "sha256": "6c326cea45594a5330ad4d71d9905a6e9e45a18ed33c0b91b48100778cffc8f7"
+        }
+      ],
+      "licenseNote": "AI-generated output; no third-party reference art; see CREDITS.md",
+      "formatMetadata": {
+        "image": {
+          "width": 810,
+          "height": 1050,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "59c4e7796232a96234e487972d7c81b50de87ab93457168e22049bb9ff8084f1"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "heroine_sad",
+      "kind": "art",
+      "reuse": "project-only",
+      "origin": "Built-in imagegen; model identifier not exposed by tool",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/characters/heroine_sad_v1.png",
+          "encoding": "binary",
+          "sha256": "1091e8e3f24ad80c6733282cdd4cba9f1ce3199bd55a283188b6e1b3cbcf80d1"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/character/heroine_sad_v1.png",
+          "encoding": "binary",
+          "sha256": "475f0f7e1aa9b14103f768d068cc76053183f3e9c180669a21fdf8fbf9f951e0"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/character/heroine_sad_v1.md",
+          "encoding": "text-lf",
+          "sha256": "e761d1a3e6c5e8a214a1a837943f4ebde43edb9b903038f48b3d2d9892705677"
+        }
+      ],
+      "licenseNote": "AI-generated output; no third-party reference art; see CREDITS.md",
+      "formatMetadata": {
+        "image": {
+          "width": 810,
+          "height": 1050,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "fa88b014e2ebcc5b288ceff9a56d1d1e212bee0a2ed5a69e666b6fbb821d7ced"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "heroine_angry",
+      "kind": "art",
+      "reuse": "project-only",
+      "origin": "Built-in imagegen; model identifier not exposed by tool",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/characters/heroine_angry_v1.png",
+          "encoding": "binary",
+          "sha256": "6c45ccec8410774b66002edc8f5df27f773f52190b526940e07ea6616d4faa42"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/character/heroine_angry_v1.png",
+          "encoding": "binary",
+          "sha256": "1fc6724b6da184525cdb135359f84fc5c4bf2a3befec897f4ab6828272b2a032"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/character/heroine_angry_v1.md",
+          "encoding": "text-lf",
+          "sha256": "4d1ee12bb9b80bbaea8b7a82399954b03220ad13ac36ef1aa5ccb87a17c2bea9"
+        }
+      ],
+      "licenseNote": "AI-generated output; no third-party reference art; see CREDITS.md",
+      "formatMetadata": {
+        "image": {
+          "width": 810,
+          "height": 1050,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "7434216f165b4caef8d6f006a018bc5670365159db64f7deef2b7cc34238bcfd"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "heroine_surprised",
+      "kind": "art",
+      "reuse": "project-only",
+      "origin": "Built-in imagegen; model identifier not exposed by tool",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/characters/heroine_surprised_v1.png",
+          "encoding": "binary",
+          "sha256": "8e299ab21f7a25a66814f450ee259ecd78b8e47c25970425ac0328d936169163"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/character/heroine_surprised_v1.png",
+          "encoding": "binary",
+          "sha256": "f55415f4bb199a0da5cf47ab23102c956e910f44861df05e600e56f8e79c1e06"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/character/heroine_surprised_v1.md",
+          "encoding": "text-lf",
+          "sha256": "60facdd431d2566dd7fe661a1f993c152b7b07e52f7028010a682d3e158e0d4b"
+        }
+      ],
+      "licenseNote": "AI-generated output; no third-party reference art; see CREDITS.md",
+      "formatMetadata": {
+        "image": {
+          "width": 810,
+          "height": 1050,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "6c859f1374458ce761528af82bba80012b5354b25d537a9deadf70e816a18e20"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "heroine_embarrassed",
+      "kind": "art",
+      "reuse": "project-only",
+      "origin": "Built-in imagegen; model identifier not exposed by tool",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/characters/heroine_embarrassed_v1.png",
+          "encoding": "binary",
+          "sha256": "6565c4a8172ab90d1811974bcdea7a66589455cec8e950e4aeac77e7c025e770"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/character/heroine_embarrassed_v1.png",
+          "encoding": "binary",
+          "sha256": "85c2fb56dabe8cbaaee7f04c78dc052656546ef9e65eb1bd487472d29ef7baac"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/character/heroine_embarrassed_v1.md",
+          "encoding": "text-lf",
+          "sha256": "24c1015db73282b017494d5d6bf7b50ff2d50af79b78793028918e241b8f014e"
+        }
+      ],
+      "licenseNote": "AI-generated output; no third-party reference art; see CREDITS.md",
+      "formatMetadata": {
+        "image": {
+          "width": 810,
+          "height": 1050,
+          "mode": "RGBA",
+          "format": "PNG",
+          "has_alpha": true,
+          "pixel_sha256": "c006224bfecb6493243a76c4f292cb293a01db50c600af0494e3eb1129c40834"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "unspoken_theme",
+      "kind": "audio",
+      "reuse": "licensed",
+      "origin": "Original score and procedural synthesis; tools/audio_process/render_soundtrack.py; no sampled recordings or music model",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/bgm/unspoken_theme.ogg",
+          "encoding": "binary",
+          "sha256": "b99834501e93374de4bd6523fbe3e3c47c9d0b75485fc6444000482836b7dae5"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/unspoken_theme_v1.wav",
+          "encoding": "binary",
+          "sha256": "597a34923ad19015bd835b054483c6fb1286b23eca9deae164588d8338edf40f"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/audio/soundtrack_v1.json",
+          "encoding": "text-lf",
+          "sha256": "9a1395f5b3d6fcb8a2aa2785f0f7e4fc857eaa7fb68626d57cb1eb762ac88a52"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 960000,
+          "duration_seconds": 40,
+          "peak": 0.099906,
+          "rms_dbfs": -31.877
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 960000,
+          "duration_seconds": 40,
+          "peak": 0.097931,
+          "rms_dbfs": -31.878
+        },
+        "approval_scope": "Agent integration and signal checks; final listening review pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "next_message_theme",
+      "kind": "audio",
+      "reuse": "licensed",
+      "origin": "Original score and procedural synthesis; tools/audio_process/render_soundtrack.py; no sampled recordings or music model",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/bgm/next_message_theme.ogg",
+          "encoding": "binary",
+          "sha256": "0698c0a05eead951c79542fb86dbdd3b9c620251a10a86087594305496fa11f2"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/next_message_theme_v1.wav",
+          "encoding": "binary",
+          "sha256": "50498a8383d4d8ccf230ec84f45564ae5c58d474c81c5ba17d30df300a5cfbc2"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/audio/soundtrack_v1.json",
+          "encoding": "text-lf",
+          "sha256": "9a1395f5b3d6fcb8a2aa2785f0f7e4fc857eaa7fb68626d57cb1eb762ac88a52"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 960000,
+          "duration_seconds": 40,
+          "peak": 0.099479,
+          "rms_dbfs": -31.865
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 960000,
+          "duration_seconds": 40,
+          "peak": 0.097931,
+          "rms_dbfs": -31.866
+        },
+        "approval_scope": "Agent integration and signal checks; final listening review pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "rain_light_ambience",
+      "kind": "audio",
+      "reuse": "licensed",
+      "origin": "Original score and procedural synthesis; tools/audio_process/render_soundtrack.py; no sampled recordings or music model",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/sfx/rain_light_ambience.ogg",
+          "encoding": "binary",
+          "sha256": "2da60b2bc04f39b080d4c6ae9e15ff9f9e145c09899e00cdf3c303c4f8081488"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/rain_light_ambience_v1.wav",
+          "encoding": "binary",
+          "sha256": "2fb3ab7972fcd45317e2d80bd181ed12f6900212c4ab0d7db0b2f83bbab5de77"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/audio/soundtrack_v1.json",
+          "encoding": "text-lf",
+          "sha256": "9a1395f5b3d6fcb8a2aa2785f0f7e4fc857eaa7fb68626d57cb1eb762ac88a52"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 768000,
+          "duration_seconds": 32,
+          "peak": 0.088299,
+          "rms_dbfs": -34.064
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 768000,
+          "duration_seconds": 32,
+          "peak": 0.086121,
+          "rms_dbfs": -34.283
+        },
+        "approval_scope": "Agent integration and signal checks; final listening review pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "paper_rustle",
+      "kind": "audio",
+      "reuse": "licensed",
+      "origin": "Original score and procedural synthesis; tools/audio_process/render_soundtrack.py; no sampled recordings or music model",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/sfx/paper_rustle.ogg",
+          "encoding": "binary",
+          "sha256": "fdcebfd3d3d084134992f773d59f4bbb4ccc8314757c19358401b864b55826c1"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/paper_rustle_v1.wav",
+          "encoding": "binary",
+          "sha256": "f9b3b812a0a3b757e5f9ba691aceefab0f6fd38d100954b6bd632d880aae766f"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/audio/soundtrack_v1.json",
+          "encoding": "text-lf",
+          "sha256": "9a1395f5b3d6fcb8a2aa2785f0f7e4fc857eaa7fb68626d57cb1eb762ac88a52"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 16800,
+          "duration_seconds": 0.7,
+          "peak": 0.201155,
+          "rms_dbfs": -29.273
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 16800,
+          "duration_seconds": 0.7,
+          "peak": 0.196198,
+          "rms_dbfs": -29.461
+        },
+        "approval_scope": "Agent integration and signal checks; final listening review pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "message_ping",
+      "kind": "audio",
+      "reuse": "licensed",
+      "origin": "Original score and procedural synthesis; tools/audio_process/render_soundtrack.py; no sampled recordings or music model",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/sfx/message_ping.ogg",
+          "encoding": "binary",
+          "sha256": "3170efed68b83414215a3750d874bbab95a2edb39d8da6f722ceba71f37e8987"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/message_ping_v1.wav",
+          "encoding": "binary",
+          "sha256": "6506477e9b5dfdd9e022a52d6cb45c86115d6a0b234f10d9331a95b19361fa2b"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/audio/soundtrack_v1.json",
+          "encoding": "text-lf",
+          "sha256": "9a1395f5b3d6fcb8a2aa2785f0f7e4fc857eaa7fb68626d57cb1eb762ac88a52"
+        }
+      ],
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 15600,
+          "duration_seconds": 0.65,
+          "peak": 0.118462,
+          "rms_dbfs": -30.046
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 15600,
+          "duration_seconds": 0.65,
+          "peak": 0.119354,
+          "rms_dbfs": -30.144
+        },
+        "approval_scope": "Agent integration and signal checks; final listening review pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "heroine_q02_honest_l002_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_q02_honest_l002_v1.ogg",
+          "encoding": "binary",
+          "sha256": "8ce518661e4480f42f9d7be914dd72b6943cff281b8abbfc4646d9713f13c6c0"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_q02_honest_l002_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "48fced3b9dabbded42bc8d3bc7d7d34cbe50688595922b404ac5cf1dabd3a0a5"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 53760,
+          "duration_seconds": 2.24,
+          "peak": 0.346098,
+          "rms_dbfs": -20.809
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 53760,
+          "duration_seconds": 2.24,
+          "peak": 0.3461,
+          "rms_dbfs": -20.851
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s03_honest_l005_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s03_honest_l005_v1.ogg",
+          "encoding": "binary",
+          "sha256": "f0d845f384ae7fde0a62e43a1b6a25c944917d9e084fcf69c627e26bbc1f2cc4"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s03_honest_l005_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "efce89ce97b439a645b24b766415e639dbbfb1786f031579408ce5e82d0d14f1"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 94080,
+          "duration_seconds": 3.92,
+          "peak": 0.619398,
+          "rms_dbfs": -19.91
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 94080,
+          "duration_seconds": 3.92,
+          "peak": 0.608582,
+          "rms_dbfs": -19.949
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s03_deferred_l007_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s03_deferred_l007_v1.ogg",
+          "encoding": "binary",
+          "sha256": "5485ba3132f49e90cc85627cc6212da5639d353652cfa75b87c9bdbdc6563aae"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s03_deferred_l007_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "cb1e1a2b65b31f9b0026c7517c3ca1c15662bbc9cc114a8cbf50baaa3127b247"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 120960,
+          "duration_seconds": 5.04,
+          "peak": 0.599413,
+          "rms_dbfs": -20.054
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 120960,
+          "duration_seconds": 5.04,
+          "peak": 0.600983,
+          "rms_dbfs": -20.076
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s04_open_l008_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s04_open_l008_v1.ogg",
+          "encoding": "binary",
+          "sha256": "886d2abb76d09ca147af06d45586726cdf09cd04f568bc6766bcdd2d20055982"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s04_open_l008_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "83fed5059848db07dff0b51a43813140cff3f9678ab5b8f7ec46fb0e71e2f0ee"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 103680,
+          "duration_seconds": 4.32,
+          "peak": 0.579856,
+          "rms_dbfs": -19.806
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 103680,
+          "duration_seconds": 4.32,
+          "peak": 0.567047,
+          "rms_dbfs": -19.831
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s04_reserved_l005_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s04_reserved_l005_v1.ogg",
+          "encoding": "binary",
+          "sha256": "dbac1fe4124601203646ac0ba57e23dcda086a53ea6628d4b3db78a29d33286e"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s04_reserved_l005_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "12be0bb97a2839423a5c3f29fad6886345a65186bd560ff494ca7bf85a8b49c9"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 101760,
+          "duration_seconds": 4.24,
+          "peak": 0.670489,
+          "rms_dbfs": -20.2
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 101760,
+          "duration_seconds": 4.24,
+          "peak": 0.672638,
+          "rms_dbfs": -20.211
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s04_waiting_l004_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s04_waiting_l004_v1.ogg",
+          "encoding": "binary",
+          "sha256": "4369babb91f40915b1eb356ecfe4a9aad04d9515e26d6af5699b27accbebe45d"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s04_waiting_l004_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "3fd571a2ae01897124448fe1ce9a5d6dcd047985d203397be2002c3c716bb3e8"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 38400,
+          "duration_seconds": 1.6,
+          "peak": 0.527687,
+          "rms_dbfs": -20.033
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 38400,
+          "duration_seconds": 1.6,
+          "peak": 0.525238,
+          "rms_dbfs": -20.05
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s04_waiting_l020_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s04_waiting_l020_v1.ogg",
+          "encoding": "binary",
+          "sha256": "84effbf606e56bd399510c40967ba1baa1acfe26f32c62cda0ac8d9edb5ff029"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s04_waiting_l020_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "2f743e557d2c27c16651a904997b094a7b6bb462ab391881458ce3a909fd5f6c"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 30720,
+          "duration_seconds": 1.28,
+          "peak": 0.448673,
+          "rms_dbfs": -21.139
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 30720,
+          "duration_seconds": 1.28,
+          "peak": 0.449249,
+          "rms_dbfs": -21.191
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s04_boundary_l007_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s04_boundary_l007_v1.ogg",
+          "encoding": "binary",
+          "sha256": "31060cd9a821070da0db984e8df25a7b914cb964d789459ad0f74c96ca237df6"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s04_boundary_l007_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "531451979992df0d790732084dc2c8aa6ed1d4209f5a9910f1b9d275806cbbef"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 157440,
+          "duration_seconds": 6.56,
+          "peak": 0.685602,
+          "rms_dbfs": -20.681
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 157440,
+          "duration_seconds": 6.56,
+          "peak": 0.649445,
+          "rms_dbfs": -20.745
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s04_repair_l009_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s04_repair_l009_v1.ogg",
+          "encoding": "binary",
+          "sha256": "e0160af73d754bb2101d980a62cc4784b84db1808585ab02ab7e3b8f56be32bb"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s04_repair_l009_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "d624d4fc03bb99e7e91760b9e6588d8d7391002593f2e32d61f7b43bd445671b"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 144000,
+          "duration_seconds": 6,
+          "peak": 0.749012,
+          "rms_dbfs": -20.052
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 144000,
+          "duration_seconds": 6,
+          "peak": 0.751312,
+          "rms_dbfs": -20.103
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s07_true_l010_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s07_true_l010_v1.ogg",
+          "encoding": "binary",
+          "sha256": "9ac1bc2f258faf27ca9461b1d71e0c19eeab96302a18df1f0eeee9484d1e3591"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s07_true_l010_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "ac67d518f1da3f9376d6ef7682bcdf939a86e70501508c35c013f0f6bcce2400"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 49920,
+          "duration_seconds": 2.08,
+          "peak": 0.621222,
+          "rms_dbfs": -20.507
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 49920,
+          "duration_seconds": 2.08,
+          "peak": 0.627533,
+          "rms_dbfs": -20.525
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "heroine_s08_normal_l005_v1",
+      "kind": "voice",
+      "reuse": "project-only",
+      "origin": "Qwen3-TTS 1.7B CustomVoice; Serena; synthesized project dialogue",
+      "sourceStatus": "present",
+      "approvalStatus": "production_user_requested_voice_upgrade",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/audio/voice/heroine_s08_normal_l005_v1.ogg",
+          "encoding": "binary",
+          "sha256": "c800c529b3d52018bd411d1227ce8ea24b8ea2eca03d43ad5cac245c1d807a10"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/audio/voice/heroine_s08_normal_l005_v1_qwen_v2.wav",
+          "encoding": "binary",
+          "sha256": "dc9213e73cd14c2e8ea9daed76b57aa0f756ba1bc1e9f918fef835e06f34f7b0"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/voice/qwen_heroine_v1.json",
+          "encoding": "text-lf",
+          "sha256": "8802352a0ec833b5c91e47ca08835548faacd6b5474150b09f98dbdeb23d1966"
+        }
+      ],
+      "licenseNote": "Qwen model and wrapper Apache-2.0; synthesized project dialogue; see CREDITS.md",
+      "formatMetadata": {
+        "audio": {
+          "format": "OGG",
+          "subtype": "VORBIS",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 69120,
+          "duration_seconds": 2.88,
+          "peak": 0.709254,
+          "rms_dbfs": -21.033
+        },
+        "source_audio": {
+          "format": "WAV",
+          "subtype": "PCM_16",
+          "sample_rate": 24000,
+          "channels": 1,
+          "frames": 69120,
+          "duration_seconds": 2.88,
+          "peak": 0.706573,
+          "rms_dbfs": -21.057
+        },
+        "approval_scope": "Engineering integration; user requested publication; human listening pending",
+        "status": "production_user_requested_voice_upgrade"
+      }
+    },
+    {
+      "id": "station_exit_covered",
+      "kind": "art",
+      "reuse": "project-only",
+      "origin": "Built-in imagegen; model identifier not exposed; original project reference",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/backgrounds/station_exit_covered.png",
+          "encoding": "binary",
+          "sha256": "c95c3f2aefcd97810ec0dd57385a5aa87d7cab753257fb39a52d78c8a08483f3"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/background/station_exit_covered_v1.png",
+          "encoding": "binary",
+          "sha256": "1bae0d776a6feec13b7ba101b063161a91b32374f6c9a5ef206a626e7abb3481"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/background/station_exit_covered_v1.md",
+          "encoding": "text-lf",
+          "sha256": "232b7196ccb17bf0164108ac90fa373a7a7eeecd31215a2fe410f9ae8a68a941"
+        }
+      ],
+      "licenseNote": "AI-generated output; own project reference; see CREDITS.md",
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "format": "PNG",
+          "has_alpha": false,
+          "pixel_sha256": "e9db877ead82102ad4e4a477ab050f37924b5a328819035c2fa0bac7c2ee97b9"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "station_exit_after_rain",
+      "kind": "art",
+      "reuse": "project-only",
+      "origin": "Built-in imagegen generation and sign-removal edit; model identifier not exposed",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/backgrounds/station_exit_after_rain.png",
+          "encoding": "binary",
+          "sha256": "11e2b4f90c350ef5ae4487b8aa18cac460abaf970da7dae5066aa329053ae4fe"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/background/station_exit_after_rain_v1.png",
+          "encoding": "binary",
+          "sha256": "6c734e047b7a99748319c0f975870c952c6d317ed5193b7e7e18dd659a09c3e5"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/background/station_exit_after_rain_v1.md",
+          "encoding": "text-lf",
+          "sha256": "a96b8bda8737d03027603bdce0676336b96d4ca069e6105885533fbffa149003"
+        }
+      ],
+      "licenseNote": "AI-generated output; own project reference; see CREDITS.md",
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "format": "PNG",
+          "has_alpha": false,
+          "pixel_sha256": "6c25df6b36c99fa1d4732706db871d36de1eb2745e398e03f78152ddeee9f895"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "nearby_cafe",
+      "kind": "art",
+      "reuse": "project-only",
+      "origin": "Built-in imagegen; model identifier not exposed; original project reference",
+      "sourceStatus": "present",
+      "approvalStatus": "candidate_user_review",
+      "files": [
+        {
+          "role": "runtime",
+          "path": "game/backgrounds/nearby_cafe.png",
+          "encoding": "binary",
+          "sha256": "9f67e75ce780a24ba9b38bade112185b4ccd97517c3eb3389eabdd78a144b60a"
+        },
+        {
+          "role": "source",
+          "path": "assets_source/background/nearby_cafe_v1.png",
+          "encoding": "binary",
+          "sha256": "c38c92c40e1fde14f386892c450851eb68577dfe946ffdc52f888792f6afcbcc"
+        },
+        {
+          "role": "prompt",
+          "path": "prompts/background/nearby_cafe_v1.md",
+          "encoding": "text-lf",
+          "sha256": "295372e3460f68593c7984f43c392e4292cfe0e6d394cad90f1e7ad95bd94a00"
+        }
+      ],
+      "licenseNote": "AI-generated output; own project reference; see CREDITS.md",
+      "formatMetadata": {
+        "image": {
+          "width": 1920,
+          "height": 1080,
+          "mode": "RGB",
+          "format": "PNG",
+          "has_alpha": false,
+          "pixel_sha256": "46048bed3825b42730bd5b89180bbcaddd0c6f2cb69e8df5ae3af1ce62f72ff0"
+        },
+        "approval_scope": "Agent integration review; user final visual choice pending",
+        "status": "candidate_user_review"
+      }
+    },
+    {
+      "id": "renpy-image-processing",
+      "kind": "tool",
+      "reuse": "recipe",
+      "origin": "Rain original encoding/layout tools; RenPy/Pillow-specific, see imports before adapting",
+      "sourceStatus": "not-applicable",
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "files": [
+        {
+          "role": "recipe",
+          "path": "tools/image_process/import_asset.py",
+          "encoding": "text-lf",
+          "sha256": "5ee6ad265744f039ec5e4c951e7f3cd50c032b0f31ef087f38f93dc57fcdf4f1"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/image_process/create_ui.py",
+          "encoding": "text-lf",
+          "sha256": "862abb3df5d0af483d5684a2cfef06a687ee7d25fede9b79868750695465f70b"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/asset_paths.py",
+          "encoding": "text-lf",
+          "sha256": "f06f6a0e18160353111c7c819180c8841156266f3599f4557cb0331b4ea71652"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/story_model.py",
+          "encoding": "text-lf",
+          "sha256": "6673033986abdd34c3b046e64470f48267d1a7202f8f04d342ccf66fc19895fe"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/prompt_registry.py",
+          "encoding": "text-lf",
+          "sha256": "4473b9d41aa673c160dd718d15491c7ce373f034edccda5cc4add8b4eabc77c9"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/__init__.py",
+          "encoding": "text-lf",
+          "sha256": "9c0982f00376c2589c52f5b2516eeb5ab56225bf513921c80c310699ae03b681"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/image_process/metadata.py",
+          "encoding": "text-lf",
+          "sha256": "d86ef46482ab222fe507a52144c9e53e399d379afa7f92124392c480973d8962"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/image_process/__init__.py",
+          "encoding": "text-lf",
+          "sha256": "22a366da1e21d8b6d9de7c8ec2c3c0a8802799a269071e8a625bea8fe2a6d2ac"
+        }
+      ]
+    },
+    {
+      "id": "procedural-audio-processing",
+      "kind": "tool",
+      "reuse": "recipe",
+      "origin": "Rain original procedural placeholders and score synthesis; Python audio/image dependencies required",
+      "sourceStatus": "not-applicable",
+      "license": {
+        "name": "MIT — original project code/procedural material only",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "files": [
+        {
+          "role": "recipe",
+          "path": "tools/bootstrap_assets.py",
+          "encoding": "text-lf",
+          "sha256": "56f1809dae6692956b265d35e3bdf673a02ec11fc6ce55c734d584f1a337811f"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/audio_process/render_soundtrack.py",
+          "encoding": "text-lf",
+          "sha256": "16c4a89a924eaae74a0c03036ad85595d4abf05588a289d2eea83dcb1051c37a"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/asset_paths.py",
+          "encoding": "text-lf",
+          "sha256": "f06f6a0e18160353111c7c819180c8841156266f3599f4557cb0331b4ea71652"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/story_model.py",
+          "encoding": "text-lf",
+          "sha256": "6673033986abdd34c3b046e64470f48267d1a7202f8f04d342ccf66fc19895fe"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/prompt_registry.py",
+          "encoding": "text-lf",
+          "sha256": "4473b9d41aa673c160dd718d15491c7ce373f034edccda5cc4add8b4eabc77c9"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/__init__.py",
+          "encoding": "text-lf",
+          "sha256": "9c0982f00376c2589c52f5b2516eeb5ab56225bf513921c80c310699ae03b681"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/audio_process/metadata.py",
+          "encoding": "text-lf",
+          "sha256": "108789078b6c260c8931be930e6440e0e619eb1f10c9bc634d4f0c5849fd2496"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/audio_process/__init__.py",
+          "encoding": "text-lf",
+          "sha256": "b12b6fcbeaf2a6c7488c3a4375e05417e12f037df1e54c5df4c4b8c7985e44ce"
+        }
+      ]
+    },
+    {
+      "id": "renpy-pwa-delivery",
+      "kind": "tool",
+      "reuse": "recipe",
+      "origin": "Rain original adapter over pinned official RenPy 8.5.3 WebAssembly; engine binaries are downloaded and retain their separate licenses",
+      "sourceStatus": "not-applicable",
+      "license": {
+        "name": "MIT — original project code only; official RenPy components retain their licenses",
+        "file": {
+          "role": "license",
+          "path": "LICENSE",
+          "encoding": "text-lf",
+          "sha256": "68122b5c19ac955bab6398e9846184255af2d75168782ac6b20329a4d1893075"
+        }
+      },
+      "files": [
+        {
+          "role": "recipe",
+          "path": "tools/build/web.py",
+          "encoding": "text-lf",
+          "sha256": "b6860479bfb032710a5a3ca12baf28fc2fe4f9135d259f00576fcb6a90bf8b18"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/build/pwa/client.js",
+          "encoding": "text-lf",
+          "sha256": "4e87de5d024a71908052bd21b1ef2eec55970c34d191f868e51411a4b04ec166"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/build/pwa/service-worker.js",
+          "encoding": "text-lf",
+          "sha256": "c277d15acf95d7593102b1171d390cabef0cfdb38284d9fb71d0f4d3bf7139f3"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/build/sdk.py",
+          "encoding": "text-lf",
+          "sha256": "328224382c46715f259d0e370c8da07b4c68934cf91806d483e78293f11f95b0"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/build/__init__.py",
+          "encoding": "text-lf",
+          "sha256": "1f1c16a37e656e78cbf7b04dcaf0112152040fc6c31e913b7875f0f3684253c2"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/story_model.py",
+          "encoding": "text-lf",
+          "sha256": "6673033986abdd34c3b046e64470f48267d1a7202f8f04d342ccf66fc19895fe"
+        },
+        {
+          "role": "recipe",
+          "path": "tools/__init__.py",
+          "encoding": "text-lf",
+          "sha256": "9c0982f00376c2589c52f5b2516eeb5ab56225bf513921c80c310699ae03b681"
+        },
+        {
+          "role": "recipe",
+          "path": "requirements-dev.txt",
+          "encoding": "text-lf",
+          "sha256": "800a1e55ccd24048b4ca48d9d53859be989e05176748610b6f134fc7c2a43829"
+        }
+      ]
+    }
+  ]
+}

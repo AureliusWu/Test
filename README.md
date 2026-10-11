@@ -2,6 +2,14 @@
 
 离线中文 Ren’Py 视觉小说。雨夜旧车站，两位久未联系的旧友，和一封没有寄出的信。
 
+**v1.2.0 双平台开发候选：Ren'Py 原生 Windows EXE + 同引擎 WebAssembly PWA。** 浏览器入口为 [Rain PWA](https://aureliuswu.github.io/Rain/)；当前提交需完成 CI / Pages 部署后更新公开验收状态，详见 [双平台说明](docs/DUAL_PLATFORM_V12.md)。
+
+PWA 首次联网保存完整内容后可安装、离线重开和导入 / 导出 Ren'Py 原生存档。浏览器与 Windows 的本机保存位置独立；请使用浏览器左上角导出备份。新版本下载完成后等待旧窗口关闭再激活，正在阅读的窗口继续使用原版本。
+
+三作品共用制作检查和可导出的许可素材包：`node scripts/vn-materials.mjs verify`、`node scripts/vn-materials.mjs export .reuse-kit/v1.1.0`。保留角色、剧情、引擎和存档身份，移植入口见 [可复用素材](docs/production/REUSABLE-MATERIALS.md)。
+
+以下保留已公开的 v1.1.1 Windows 正式版身份证据；它不替代新 PWA 或 v1.2.0 的验收。
+
 **v1.1.1 鉴赏室体验补丁已正式发布。** 六章、24个叙事场景、四次选择、16条路线、Normal / True两个结局，七表情、四背景、旧信CG、17句配音及原创音乐 / 环境音效。
 
 主菜单进入“鉴赏室”：五张已有背景 / CG、三首音乐随真实剧情解锁，退出后保留进度，未解锁内容隐藏图片和标题。音乐鉴赏显示已解锁数量、当前曲名及播放 / 暂停 / 停止状态；暂停后显示“继续”，停止后提示选择已解锁音乐。状态分隔符改用现有字体支持的中文冒号，修复方框缺字。
@@ -43,6 +51,20 @@ python -m tools.build.sdk
 ```
 
 Windows 使用固定并校验 SHA-256 的 Ren’Py 8.5.3 SDK：
+
+本机验收可通过 `RENPY_ACCEPTANCE_WINDOWED=1`、`RENPY_HIGHDPI=1` 使用真正 1920×1080 窗口，无需改系统分辨率或 DPI；仍实际切换全屏并校验硬件尺寸，所有原生 / 缩放 PNG 门槛保持。源码验收与发行构建分别复制到临时工程，排除 `game/saves`，保护作者 / 玩家持久数据。
+
+Web 构建与浏览器检查：
+
+```powershell
+python -m tools.build.sdk
+python -m tools.build.web
+npm ci
+npx playwright install chromium
+npm run test:pwa
+```
+
+生成 `dist/web/` 与版本化 `*-web.zip`，CI 使用相同官方 WASM、完整原子缓存和 `/Rain/` 子路径检查后部署 Pages。Windows 继续使用 Ren'Py 原生 ZIP，无新播放器框架。
 
 升级构建先从已发布的 v1.1.0 ZIP 校验并保留原语句名；CI 自动完成。手工构建也应在 lint 前运行 `python -m tools.build.seed_release_names --previous-zip <已下载的完整v1.1.0-ZIP>`。标准 [old-game 机制](https://www.renpy.org/doc/html/build.html#old-game) 不进入玩家包；真实旧档加载另行测试。
 

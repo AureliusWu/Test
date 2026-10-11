@@ -22,7 +22,7 @@ def safe(z):
 
 def main():
     require(os.name=="nt", "This exporter requires the actual Windows runner")
-    version=(ROOT/"VERSION").read_text().strip(); require(version=="1.1.1", "Wrong version")
+    version=(ROOT/"VERSION").read_text().strip(); require(version=="1.2.0", "Wrong version")
     candidate=os.environ["GITHUB_SHA"]; run_id=int(os.environ["GITHUB_RUN_ID"])
     reports=ROOT/"reports"; dist=ROOT/"dist"; story=load_story()
     plan=(ROOT/"game/testcases.rpy").read_text(encoding="utf-8")

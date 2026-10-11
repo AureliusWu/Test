@@ -1,0 +1,138 @@
+name: Native RenPy PWA and shared materials
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rain-web-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: '1'
+      SDL_AUDIODRIVER: dummy
+      RENPY_RENDERER: gl2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install authoring and browser verification dependencies
+        run: |
+          python -m pip install -r requirements-dev.txt
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Native authoring and shared material checks
+        run: |
+          python -m tools.validate
+          node scripts/vn-contract.mjs game/data/story.json
+          node --test scripts/vn-materials.test.mjs
+          node scripts/vn-materials.mjs verify
+          node scripts/vn-materials.mjs export .reuse-kit/v1.1.0
+      - uses: actions/cache@v4
+        with:
+          path: .runtime
+          key: rain-renpy-linux-web-8.5.3-eb0a9be7-954db897
+      - name: Fixed official SDK and published statement identities
+        run: |
+          python -m tools.build.sdk
+          mkdir -p .runtime/compat
+          curl --fail --location --retry 3 'https://github.com/AureliusWu/Rain/releases/download/v1.1.0/BeforeTheRainStops-1.1.0-win.zip' -o .runtime/compat/BeforeTheRainStops-1.1.0-win.zip
+          python -m tools.build.seed_release_names --previous-zip .runtime/compat/BeforeTheRainStops-1.1.0-win.zip
+      - name: Build official WASM and atomic offline application
+        run: xvfb-run -a python -m tools.build.web
+      - name: Actual browser, subpath, offline, native save, and update checks
+        run: npm run test:pwa
+      - name: Upload complete PWA and browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Rain-Web-${{ github.sha }}
+          path: |
+            dist/*-web.zip
+            reports/web-build.json
+            reports/pwa/
+          if-no-files-found: error
+      - name: Upload reusable material kit
+        uses: actions/upload-artifact@v4
+        with:
+          name: Rain-Reusable-Materials-${{ github.sha }}
+          path: .reuse-kit/v1.1.0/
+          include-hidden-files: true
+          if-no-files-found: error
+      - name: Upload verified Pages output
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+          path: dist/web
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: web
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      actions: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: rain-pages
+      cancel-in-progress: false
+    steps:
+      - name: Check tested commit is still main
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          current=$(gh api repos/${{ github.repository }}/git/ref/heads/main --jq '.object.sha')
+          test "$current" = '${{ github.sha }}'
+      - name: Deploy tested PWA
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Fetch exact tested build metadata
+        uses: actions/download-artifact@v4
+        with:
+          name: Rain-Web-${{ github.sha }}
+          path: .runtime/deployed-build
+      - name: Prepare published browser interaction check
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Actual published menu, save/load and offline reopen
+        env:
+          PWA_TARGET_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          metadata=$(find .runtime/deployed-build -name web-build.json -print -quit)
+          test -n "$metadata"
+          export PWA_EXPECTED_REVISION=$(jq -r '.revision' "$metadata")
+          node scripts/pwa-live-smoke.mjs
+      - name: Upload published browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Rain-Public-PWA-${{ github.sha }}-${{ github.run_attempt }}
+          path: reports/public-pwa/
+          if-no-files-found: warn

@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "version": "1.2.0",
+  "recorded_utc": "2026-10-11T04:11:23.063596+00:00",
+  "status": "native_final_execution_pending",
+  "engine": "RenPy 8.5.3.26051504 native and official WASM",
+  "authoring": {
+    "status": "passed",
+    "python_tests": 133,
+    "validators": "all passed",
+    "log_sha256": "5a8e2e48ea7b3a6f9c16d2f512db3e8ad24e257c17aa051acd68b5a2d4ef70bc"
+  },
+  "lint": {
+    "status": "passed",
+    "log_sha256": "420298119a5425361f4c8f670193814dd6f90ed95b7763833eb5c5d41599f28d"
+  },
+  "shared_materials": {
+    "status": "passed",
+    "tool_tests": 5,
+    "entries": 89,
+    "file_references": 212,
+    "export_entries": 59,
+    "export_files": 140
+  },
+  "pwa": {
+    "status": "passed",
+    "engine": "RenPy 8.5.3 official WASM",
+    "version": "1.2.0",
+    "checks": [
+      "manifest parsed and app-scoped start URL; complete offline marker",
+      "actual Start click and native narration",
+      "actual native Save screen writes slot 1",
+      "native export save ZIP produced by actual browser control",
+      "offline reload boots complete native WASM and starts narrative",
+      "412x915, 568x320 and 844x390 native display boots",
+      "complete update waits while old WASM narrative keeps its original controller and state",
+      "closing old windows activates complete update; prior own cache removed and unrelated/other-scope caches retained",
+      "real export ZIP imported into fresh browser context and actual Load restores saved scene",
+      "unrelated parent-scope worker cannot announce this application offline-ready",
+      "nested subpath fresh install and complete offline reopen",
+      "missing engine resource cannot produce an offline-ready marker"
+    ],
+    "samples": [
+      {
+        "mode": "first_install",
+        "milliseconds": 5446
+      },
+      {
+        "mode": "cached_reopen",
+        "milliseconds": 5018
+      },
+      {
+        "mode": "cached_reopen",
+        "milliseconds": 5332
+      }
+    ],
+    "first_baseline": true,
+    "budgets": {
+      "offline_bytes": 100000000,
+      "boot_milliseconds": 120000
+    },
+    "offline_bytes": 73508568,
+    "screenshots": [
+      {
+        "name": "desktop-main-menu",
+        "sha256": "d0ec25b8047578f54e5b6728bfa76964e4b8e131ca6f9686980953e276eb8d04"
+      },
+      {
+        "name": "desktop-story",
+        "sha256": "f6d3623f39090c8664c718042e80f08bdc3dc8d7bc7abdadf8a71a79c67fb3c2"
+      },
+      {
+        "name": "offline-story",
+        "sha256": "ada80aef6d863e7e59dfb47d3a6b15de7abdb0774c2520e960963add4d9d8c4e"
+      },
+      {
+        "name": "412x915",
+        "sha256": "2c5999ddadb64491339c06f6c0dd269fcfa374f17823038653ad33a2f892246c"
+      },
+      {
+        "name": "568x320",
+        "sha256": "0374a3210640c335f681e06ea6b144935bbf3b9be0f1333110b6553b859373b2"
+      },
+      {
+        "name": "844x390",
+        "sha256": "f052737117151843bde235444f0d452969f6a6a338f75112fafae8ebdaadd84c"
+      },
+      {
+        "name": "imported-native-save",
+        "sha256": "18ecd85efa25f1d109964630fca6a565947448482d262c7fa24acc519b39c574"
+      }
+    ],
+    "errors": [],
+    "requests_outside_application": [
+      "/favicon.ico"
+    ],
+    "limits": [
+      "Physical device installation and human listening remain separate acceptance.",
+      "Smoke exercises beginning and native save export; all 16 full state routes are checked by native Windows suite."
+    ],
+    "build": {
+      "status": "built",
+      "engine": "RenPy 8.5.3 official WASM",
+      "web_sdk_sha256": "954db897e65f51ea63cb2fb7b203d02be0447f4e22069514020bbe6c6691fdfc",
+      "runtime_files": 27,
+      "offline_bytes": 73508568,
+      "revision": "6ab39ab8b547bf3c944618ce",
+      "version": "1.2.0",
+      "web_zip_sha256": "e15b89f7b27aa0a546c0cd367ca6c89c65f24e08c58fcf2cc20b2b3697c86c13",
+      "scope": "relative; supports /Rain/ and local test subpaths",
+      "browser_execution": "requires actual smoke test"
+    },
+    "zip": {
+      "name": "BeforeTheRainStops-1.2.0-web.zip",
+      "bytes": 48056818,
+      "sha256": "e15b89f7b27aa0a546c0cd367ca6c89c65f24e08c58fcf2cc20b2b3697c86c13",
+      "scope": "local built candidate, distinct from later CI artifact bytes"
+    },
+    "public_deployment": "pending exact CI artifact and real published browser smoke"
+  },
+  "windows_zip": {
+    "name": "BeforeTheRainStops-1.2.0-win.zip",
+    "bytes": 56383752,
+    "sha256": "699f28b2ed7dee9996f661e12cc08ae82b9cec7d388d6876438e0c3bad75335a",
+    "scope": "local built candidate, distinct from later CI artifact bytes"
+  },
+  "native_final": {
+    "status": "pending",
+    "source": "pending final conditional window harness",
+    "zip_exe": "pending final plan",
+    "cross_process": "pending",
+    "real_previous_saves": "pending exact v1.1.0 EXE writer/current reader",
+    "startup_3_before_3_after": "pending real v1.1.1 and v1.2.0 EXE processes",
+    "prefix": {
+      "status": "passed",
+      "cases": 6,
+      "assertions": 103,
+      "screenshots": 29,
+      "iterations": 1,
+      "seconds": 48.492
+    }
+  },
+  "local_display": {
+    "guard_status": "passed",
+    "local_helper_exit": 1,
+    "current_pixels": [
+      2560,
+      1440
+    ],
+    "current_hz": 60,
+    "bits": 32,
+    "saved_configuration_matches_current": true,
+    "process_aware_dpi": 120,
+    "scope": "Current state checked read-only; old local display helper had changed 1920/280Hz, has no built-in restore guarantee, now refused outside GitHub Actions. No before-call refresh snapshot asserted."
+  },
+  "limits": [
+    "PWA is a first local baseline, not a performance regression comparison.",
+    "Raw offline payload about73.5MB and initial download cost retain WARN.",
+    "Windows uses dummy audio; human listening, reading timing, ordinary hardware/DPI, physical PWA installation and final creative approval remain pending."
+  ],
+  "prior_harness_failures": [
+    "Initial source full run with earlier optional window harness passed36/448/82, superseded by current final plan.",
+    "First staged ZIP failed after28cases/247assertions due unexpected maximized resize; not a final PASS.",
+    "Unconditional SetField local harness caused Start/resize interaction timing and was stopped after observed route failures; current helper avoids unnecessary restart and final prefix passes."
+  ],
+  "public_release_status": "pending dual same-commit CI validation and engineering prerelease download back-read"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "replace-with-unique-id",
+  "kind": "art",
+  "reuse": "project-only",
+  "origin": "Record generator/source URL, revision and exact request",
+  "sourceStatus": "present",
+  "license": { "name": "Verify actual scope before reuse", "file": { "path": "licenses/verified.txt", "encoding": "text-lf", "sha256": "REPLACE_WITH_LF_SHA256" } },
+  "files": [
+    { "role": "runtime", "path": "public/art/example.webp", "encoding": "binary", "sha256": "REPLACE_WITH_SHA256" },
+    { "role": "source", "path": "assets_source/example.png", "encoding": "binary", "sha256": "REPLACE_WITH_SHA256" },
+    { "role": "prompt", "path": "docs/prompts/example.md", "encoding": "text-lf", "sha256": "REPLACE_WITH_LF_SHA256" }
+  ]
+}

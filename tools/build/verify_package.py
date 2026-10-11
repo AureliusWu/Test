@@ -157,10 +157,20 @@ def main():
         if not interpreter.is_file() or not (sdk / 'renpy.py').is_file():
             raise SystemExit('Source SDK is incomplete')
         evidence = Path('reports')
-        with tempfile.TemporaryDirectory(prefix='galgame-source-saves-') as saves:
-            result = run_source_tests([str(interpreter), '-u', str(sdk / 'renpy.py'), '.', 'test', 'global',
-                '--report-detailed', '--overwrite-screenshots', '--savedir', saves],
-                cwd=Path.cwd(), evidence=evidence, timeout=args.timeout)
+        evidence = evidence.resolve()
+        # A --savedir alone does not isolate Ren'Py: it also merges game/saves.
+        # Keep author/player saves and simultaneous compile/build processes out
+        # of the acceptance game, just as the existing voice smoke does.
+        with tempfile.TemporaryDirectory(prefix='galgame-source-isolated-') as temp:
+            project = Path(temp) / 'project'
+            shutil.copytree(Path('game'), project / 'game', ignore=shutil.ignore_patterns('saves'))
+            if Path('old-game').is_dir(): shutil.copytree('old-game', project / 'old-game')
+            try:
+                result = run_source_tests([str(interpreter), '-u', str(sdk / 'renpy.py'), str(project), 'test', 'global',
+                    '--report-detailed', '--overwrite-screenshots', '--savedir', str(Path(temp) / 'saves')],
+                    cwd=project, evidence=evidence, timeout=args.timeout)
+            finally:
+                collect_runtime_evidence(project / 'BeforeTheRainStops.exe', evidence)
         if result.returncode:
             raise SystemExit(result.returncode)
         try:

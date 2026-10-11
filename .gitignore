@@ -19,3 +19,7 @@ old-game/
 *.zip
 *.tar.bz2
 *.bak
+node_modules/
+web-icon.png
+web-presplash.png
+.reuse-kit/

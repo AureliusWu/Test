@@ -39,6 +39,14 @@ jobs:
         run: python -m tools.preflight --require-clean
       - name: Validate graph, prose, assets, and generated scripts
         run: python -m tools.validate
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Shared structure and licensed material validation
+        run: |
+          node scripts/vn-contract.mjs game/data/story.json
+          node --test scripts/vn-materials.test.mjs
+          node scripts/vn-materials.mjs verify
       - uses: actions/cache@v4
         with:
           path: .runtime
@@ -48,7 +56,7 @@ jobs:
       - name: Preserve published statement names for v1 saves
         run: |
           New-Item -ItemType Directory -Force .runtime/compat | Out-Null
-          Invoke-WebRequest -Uri "https://github.com/AureliusWu/Test/releases/download/v1.1.0/BeforeTheRainStops-1.1.0-win.zip" -OutFile ".runtime/compat/BeforeTheRainStops-1.1.0-win.zip"
+          Invoke-WebRequest -Uri "https://github.com/AureliusWu/Rain/releases/download/v1.1.0/BeforeTheRainStops-1.1.0-win.zip" -OutFile ".runtime/compat/BeforeTheRainStops-1.1.0-win.zip"
           python -m tools.build.seed_release_names --previous-zip .runtime/compat/BeforeTheRainStops-1.1.0-win.zip
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Ren'Py lint
